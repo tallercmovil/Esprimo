@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/pacifico"
-        android:text="¿Es primo?"
+        android:text="@string/es_primo"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="@dimen/tamaniotexto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -29,9 +29,11 @@
         android:ems="10"
         android:fontFamily="@font/bryndanwrite"
         android:gravity="center_horizontal"
-        android:hint="Número"
+        android:hint="@string/hint"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="5"
+        android:textColorHint="#00897B"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +63,7 @@
         android:backgroundTint="@color/teal_700"
         android:fontFamily="@font/bryndanwrite"
         android:onClick="click"
-        android:text="Verificar"
+        android:text="@string/verificar"
         android:textAllCaps="false"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,5 +71,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.73" />
+
+    <Button
+        android:id="@+id/btnEs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="click"
+        android:text="Es"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="click"
+        android:text="EN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnConf"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEs" />
+
+    <Button
+        android:id="@+id/btnConf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:onClick="click"
+        android:text="CONF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
